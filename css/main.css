@@ -184,25 +184,33 @@ textarea {
   clear: both;
 }
 
-.logo {
+.header {
+  grid-column: 2/3;
+}
+
+.header .logo {
   padding: 20px;
   text-align: center;
   font-size: xx-large;
   line-height: 60px;
   margin-top: 10px;
-  grid-column: 2/3;
 }
 
-.logo > img {
-  width: 300px
+.header .logo > img {
+  max-width: 600px
 }
 
-.logo > h1 {
+.header .logo > h1 {
   margin: 0;
 }
 
-.logo > h1 > span {
+.header .logo > h1 > span {
   color: #f2a100;
+}
+
+.header .bio {
+  text-align: center;
+  margin: 0;
 }
 
 .social {
@@ -260,6 +268,8 @@ textarea {
 .social svg {
   fill: white;
   padding: 10px;
+  width: 30px;
+  height: 30px;
 }
 
 .social .twitter {
@@ -284,11 +294,16 @@ textarea {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   justify-items: stretch;
   align-items: stretch;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
 }
 
 

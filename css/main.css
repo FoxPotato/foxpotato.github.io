@@ -188,8 +188,11 @@ textarea {
   padding: 20px;
   text-align: center;
   font-size: xx-large;
+  line-height: 60px;
+  margin-top: 10px;
   grid-column: 2/3;
 }
+
 .logo > img {
   width: 300px
 }
@@ -200,6 +203,73 @@ textarea {
 
 .logo > h1 > span {
   color: #f2a100;
+}
+
+.social {
+  text-align: center;
+  grid-column: 2/3;
+
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.social .badge {
+  flex: 0 0 auto;
+  margin: 5px;
+  color: white;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  position: relative;
+  background-color: currentColor;
+}
+
+.social .badge::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  height: 50px;
+  width: 50px;
+  background-color: currentColor;
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.social .badge:hover {
+  opacity: 0.5;
+}
+
+.social svg {
+  fill: white;
+}
+
+.social .twitter {
+  color: #1DA1F2;
+}
+
+.social .linkedin {
+  color: #0077B5;
+}
+
+.social .github {
+  color: #181717;
+}
+
+.social .devto {
+  color: #0A0A0A;
+}
+
+.social .email, .email::before {
+  color: #f28d00;
 }
 
 .container {
